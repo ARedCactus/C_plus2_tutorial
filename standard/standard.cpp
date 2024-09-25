@@ -1,12 +1,32 @@
-#include "standard.hpp"
 #include <thread>
 #include <iostream>
 #include <unordered_map>
+
+#include "standard.hpp"
 
 //宏定义变量命名：对象+属性  以下划线"_"开头
 #define _area 3
 //宏定义函数命名：单词首字母大写，以下划线"_"开头
 #define _maxNumber(a, b)(a>b? a:b)
+
+//不推荐以上 #define obj... 用法，实际项目不会使用
+//推荐以下方法代替：
+
+const int _area_1{3};
+template<typename T> constexpr T
+_maxNumber_1(T a, T b){
+    return a>b? a:b;
+}
+
+//我们推荐将宏定义放到命名空间下，防止污染标准库
+//e.g
+namespace TempNameSapce{
+const int _area_1{3};
+template<typename T> constexpr T
+_maxNumber_1(T a, T b){
+    return a>b? a:b;
+}
+};
 
 std::vector<std::unordered_map<int, std::string>>  //函数返回值太长，直接换行
 getMap(int num_1, std::string str_1,        // 参数太多，对齐换行

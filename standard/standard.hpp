@@ -1,11 +1,20 @@
-#ifndef HEAD_H
-#define HEAD_H
+#ifndef STANDARD_HPP
+#define STANDARD_HPP    // *.hpp，*.h文件开头均以 "#ifndef+文件名字母大写" 开头
 
+//先写std标准库文件
 #include <string>
 #include <variant>
 #include <vector>
 #include <tuple>
 #include <iostream>
+// ---> 空一行
+//再写外部库头文件，例如Eigen，opencv, pcl，ros等外部库
+ //include <Eigen>
+// ---> 空一行
+//最后写自己的头文件
+// #include "other.h"
+// ---> 空一行
+//三种头文件之间空出一行， 不同头文件不要混在一起
 
 // 外层命名空间
 namespace NameSpaceOutside{
