@@ -9,7 +9,7 @@
 #include <iostream>
 // ---> 空一行
 //再写外部库头文件，例如Eigen，opencv, pcl，ros等外部库
- //include <Eigen>
+ //include <Eigen/Dense>
 // ---> 空一行
 //最后写自己的头文件
 // #include "other.h"
