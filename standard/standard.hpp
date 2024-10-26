@@ -1,7 +1,7 @@
 #ifndef STANDARD_HPP
 #define STANDARD_HPP    // *.hpp，*.h文件开头均以 "#ifndef+文件名字母大写" 开头
 
-//先写std标准库文件
+//先写stl标准库文件
 #include <string>
 #include <variant>
 #include <vector>
